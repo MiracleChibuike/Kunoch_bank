@@ -5,3 +5,9 @@
 3: Please endeavour that your JS page for each is well linked across board
 4: Please remember to follow the due process when deployng your changes so as to not destroy others works
 5: Please visit the images folder and see exmaple of how to work with SVG images
+
+
+## Pages and people building it
+-- Home Page and FAQ - (Chiamaka)
+-- About Us and Business Page - (Anthony)
+-- Personal Page - (Daniel)
