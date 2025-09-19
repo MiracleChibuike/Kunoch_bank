@@ -4,3 +4,4 @@
 2: Please all should endeavour to create seperate pages for each of their tasks
 3: Please endeavour that your JS page for each is well linked across board
 4: Please remember to follow the due process when deployng your changes so as to not destroy others works
+5: Please visit the images folder and see exmaple of how to work with SVG images
