@@ -1,0 +1,6 @@
+## INSTRUCTIONS
+
+1: All HTML pages are going to be residing outside the dist folder
+2: Please all should endeavour to create seperate pages for each of their tasks
+3: Please endeavour that your JS page for each is well linked across board
+4: Please remember to follow the due process when deployng your changes so as to not destroy others works
