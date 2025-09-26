@@ -63,7 +63,7 @@ nav {
     /* leading-trim: NONE; */
     line-height: 100%;
     letter-spacing: 0%;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 nav ul {
@@ -107,25 +107,29 @@ button {
     border: none;
 }
 
-.about {
-    position: relative;
-    /* width: 1728px;
+/* .about {
+    display: grid;
+    place-content: center;
+    /* position: relative; */
+/* width: 1728px;
     height: 718.7100219726562;
-    /* angle: 0 deg; */
+    /* angle: 0 deg;
     opacity: 1;
-    background: url("/dist/assets/images/home_page/Group\ 150.png");
-    height: 70vh;
+    /* background: url("/dist/assets/images/home_page/Group\ 150.png"); */
+/* height: 70vh; */
+/* text-align: center; 
+} */
+.carousel-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
 }
 
-h3 {
-    margin-top: 50px;
+.carousel h3 {
+    /* margin-top: 50px; */
     color: white;
-    position: absolute;
-    width: 477;
-    height: 45;
-    top: 130.81px;
-    left: 589.47px;
-    /* angle: 0 deg; */
     opacity: 1;
     font-family: Mulish;
     font-weight: 600;
@@ -137,48 +141,68 @@ h3 {
 
 }
 
-.we {
+.carousel .we {
     text-align: center;
     color: white;
-    position: absolute;
-    width: 1246;
-    height: 60;
-    top: 270.23px;
-    left: 140px;
-    /* angle: 0 deg; */
     opacity: 1;
     font-family: Mulish;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 24px;
     /* leading-trim: NONE; */
-    line-height: 100%;
+    line-height: 30px;
     letter-spacing: 0%;
-
+    margin-top: 20px;
 }
 
-.acc {
-    position: absolute;
-    width: 297;
-    height: 62;
-    top: 350.08px;
-    left: 698.13px;
+.carousel .acc {
+    /* position: absolute;
+    top: 330.08px;
+    left: 758.13px; */
     /* angle: 0 deg; */
+    width: 200px;
     opacity: 1;
     border-radius: 5px;
     padding-top: 16px;
     padding-right: 27px;
     padding-bottom: 16px;
     padding-left: 27px;
-    gap: 16px;
+    /* gap: 16px; */
     background: #047857;
     color: white;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease;
+    height: 70vh;
+}
+
+.carousel .carousel-item>img {
+    height: 70vh;
+}
+
+.dark {
+    filter: brightness(0.5);
+}
+
+/* .carousel .carousel-indicators > button{
+    /* width: 10px; */
+/* height: 2px; 
+    border-radius: 50%;
+    background: white;
+    padding: 0;
+} */
+.carousel .carousel-indicators>button:focus {
+    background: var(--clr-Main-Green);
 }
 
 .empty {
     background: white;
-    height: 5vh;
+    height: 20px;
 }
 
 .pay {
@@ -246,12 +270,10 @@ h3 {
 
 }
 
-.amt {
+.pay .amt {
     position: absolute;
-    width: 131.85791015625;
-    height: 51.72248458862305;
-    top: 920.66px;
-    left: 703.82px;
+    top: 950.66px;
+    left: 790.82px;
     /* angle: 0 deg; */
     opacity: 1;
     font-family: Mulish;
@@ -269,7 +291,7 @@ h3 {
     height: 100vh;
 }
 
-.serv {
+.service .serv {
     text-align: center;
     /* width: 284;
 height: 60;
@@ -283,12 +305,16 @@ left: 621px; */
     /* leading-trim: NONE; */
     /* line-height: 100%;
 letter-spacing: 0%; */
-
+    margin-bottom: 10px;
 }
 
 .cards {
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    gap: 40px;
 }
 
 .card {
@@ -297,6 +323,12 @@ letter-spacing: 0%; */
     /* angle: 0 deg; */
     opacity: 1;
     background: white;
+    width: 450px;
+
+}
+
+.card img {
+    width: 450px;
 }
 
 .head {
@@ -305,6 +337,7 @@ letter-spacing: 0%; */
 }
 
 .read {
+    width: 200px;
     opacity: 1;
     border-radius: 5px;
     padding-top: 16px;
@@ -318,38 +351,373 @@ letter-spacing: 0%; */
     margin-left: 20px;
     font-size: 20px;
 }
-.recom{
+
+.recom {
     background: var(--clr-light-green);
     padding: 30px 40px 30px 55px;
 }
-.you{
+
+.you {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 20px;
+    place-content: center;
 }
-.your{
+
+.your {
     background: white;
     border-radius: 10px;
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
-    width: 300px;
+    width: 350px;
     padding-bottom: 10px;
 }
-.your img{
-    width: 300px;
+
+.your img {
+    width: 350px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.your p{
+
+.your p {
     margin-top: 5px;
     margin-left: 10px;
     font-family: Mulish;
 }
-.down{
+
+.down {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background: var(--clr-Main-Green);
     color: white;
-    padding: 40px ;
+    padding: 40px;
     line-height: 30px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-section {
+    background-color: var(--clr-Main-Green);
+}
+
+.footer-section h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    padding: 0;
+    list-style: none;
+    line-height: 30px;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #fbc02d;
+    /* gold hover */
+}
+
+.footer-link {
+    font-weight: bold;
+    color: #fbc02d;
+    /* highlight FAQ */
+}
+
+.footer-section i {
+    margin-right: 6px;
+}
+
+/* Responsive styles for carousel */
+@media screen and (max-width: 700px) {
+    .carousel-item {
+        height: 40vh;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        /* height: auto; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        flex-direction: column;
+    }
+}
+
+.carousel h3 {
+    font-size: 1.1rem;
+}
+
+.carousel .we {
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.acc {
+    /* position: static; */
+    width: 100px;
+    margin: 10px;
+    padding: 10px 0;
+    font-size: 1rem;
+    display: block;
+
+}
+
+.carousel-item img {
+    height: 40vh;
+    object-fit: cover;
+}
+
+.carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+}
+
+.pay .amt {
+    position: absolute;
+    top: 1150px;
+    left: 270px;
+}
+
+.parent .pay {
+    padding: 30px 0;
+}
+
+
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .carousel-item {
+        height: 55vh;
+    }
+
+    .carousel-caption {
+        padding: 18px;
+        height: auto;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .we {
+        font-size: 1.1rem;
+        margin-top: 14px;
+    }
+
+    .acc {
+        position: static;
+        width: 100px;
+        margin: 12px auto 0 auto;
+        padding: 12px 0;
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    .carousel-item img {
+        height: 55vh;
+        object-fit: cover;
+    }
+
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+    }
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 700px) {
+    .navcon {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 40px;
+        height: 22px;
+    }
+
+    nav {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .cards {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .card {
+        width: 75vw;
+        min-width: 0;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .you {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .your {
+        width: 75vw;
+        min-width: 0;
+        padding-bottom: 8px;
+    }
+
+    .your img {
+        width: 100%;
+        height: auto;
+    }
+
+    .down {
+        flex-direction: column;
+        padding: 20px 10px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .pay {
+        flex-direction: column;
+        padding: 20px 10px 0 10px;
+        text-align: center;
+    }
+
+    .service {
+        padding: 15px 0;
+        height: auto;
+    }
+
+    .serv {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .day {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive styles for tablets */
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .navcon {
+        width: 100vw;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .logo {
+        margin-left: 40px;
+        margin-top: 15px;
+        width: 48px;
+        height: 26px;
+    }
+
+    nav {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+
+    nav ul {
+        gap: 16px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-left: 25px;
+    }
+
+    .card {
+        width: 45vw;
+        min-width: 0;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .you {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .your {
+        width: 45vw;
+        min-width: 0;
+        padding-bottom: 8px;
+    }
+
+    .your img {
+        width: 100%;
+        height: auto;
+    }
+
+    .down {
+        flex-direction: column;
+        padding: 30px 20px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    .pay {
+        flex-direction: column;
+        padding: 30px 20px 0 20px;
+        text-align: center;
+    }
+
+    .service {
+        padding: 20px 0;
+        height: auto;
+    }
+
+    .serv {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+    .pay .amt{
+        position: absolute;
+        top: 1250px;
+        left: 450px;
+    }
+
+    .day {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    .acc{
+        margin: 20px;
+    }
 }
