@@ -8,22 +8,38 @@
   pointer-events: none;
 }
 /* Personal Dropdown Custom Color */
-.navbar .dropdown-menu[aria-labelledby="personalDropdown"] {
-  background-color: #075274;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-}
 
-.navbar .dropdown-menu[aria-labelledby="personalDropdown"] .dropdown-item {
-  color: #fff;
-}
-
-.navbar .dropdown-menu[aria-labelledby="personalDropdown"] .dropdown-item:hover {
-  background-color: #0ea5e9;
-  color: #fff;
-}
 @import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
+
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #111;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link.active {
+  color: #198754;
+  font-weight: 600;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #198754;
+  transition: width 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.navbar-nav .nav-link:hover {
+  color: #198754;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
 
 *{
     margin: 0;
