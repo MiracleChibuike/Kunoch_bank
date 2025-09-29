@@ -1,3 +1,12 @@
+/* Show dropdown on hover for Personal menu */
+.navbar .nav-item.dropdown:hover .dropdown-menu[aria-labelledby="personalDropdown"] {
+  display: block;
+  margin-top: 0;
+}
+
+.navbar .nav-item.dropdown .dropdown-toggle {
+  pointer-events: none;
+}
 /* Personal Dropdown Custom Color */
 .navbar .dropdown-menu[aria-labelledby="personalDropdown"] {
   background-color: #075274;
