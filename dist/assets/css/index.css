@@ -1,4 +1,3 @@
-
 /* Our main css Page  */
 
 /* Paste the google fonts */
@@ -49,31 +48,35 @@ h4 {
 
 /* Navbar link hover effect */
 .navbar-nav .nav-link {
-  position: relative;
-  color: #111;
-  transition: color 0.2s;
+    position: relative;
+    color: #111;
+    transition: color 0.2s;
 }
+
 .navbar-nav .nav-link.active {
-  color: #198754;
-  font-weight: 600;
+    color: #198754;
+    font-weight: 600;
 }
+
 .navbar-nav .nav-link::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #198754;
-  transition: width 0.2s;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #198754;
+    transition: width 0.2s;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
 }
+
 .navbar-nav .nav-link:hover {
-  color: #198754;
+    color: #198754;
 }
+
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
-  width: 100%;
+    width: 100%;
 }
 
 button {
@@ -109,7 +112,7 @@ button {
     /* position: relative; */
     /* width: 1728px;
     height: 718.7100219726562;
-    /* angle: 0 deg; */
+    /* angle: 0 deg;
     opacity: 1;
     background: url("/dist/assets/images/home_page/Group\ 150.png") no-repeat center/cover;
     /* background: var(--clr-Main-Blue); */
@@ -132,7 +135,7 @@ h3 {
 
 }
 
-.we {
+.carousel .we {
     text-align: center;
     color: white;
     /* angle: 0 deg; */
@@ -142,30 +145,70 @@ h3 {
     font-style: SemiBold;
     font-size: 24px;
     /* leading-trim: NONE; */
-    line-height: 100%;
+    line-height: 30px;
     letter-spacing: 0%;
-
+    margin-top: 20px;
 }
 
-.acc {
+.carousel .acc {
     /* angle: 0 deg; */
+    width: 200px;
     opacity: 1;
     border-radius: 5px;
-    padding-top: 16px;
-    padding-right: 27px;
-    padding-bottom: 16px;
-    padding-left: 27px;
-    gap: 16px;
+    padding-top: 12px;
+    padding-right: 30px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    /* gap: 16px; */
     background: #047857;
     color: white;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease;
+    height: 70vh;
+}
+
+.carousel .carousel-item>img {
+    height: 70vh;
+}
+
+.dark {
+    filter: brightness(0.5);
+}
+
+.carousel-caption {
+    padding: 10px;
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+/* .carousel .carousel-indicators > button{
+    /* width: 10px; */
+/* height: 2px; 
+    border-radius: 50%;
+    background: white;
+    padding: 0;
+} */
+.carousel .carousel-indicators>button:focus {
+    background: var(--clr-Main-Green);
 }
 
 .pay {
     background: var(--clr-Main-Green);
     display: flex;
     color: white;
-    padding: 50px 30px;
+    padding: 30px 30px 20px;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
@@ -205,10 +248,6 @@ h3 {
 }
 
 .sal {
-    width: 343;
-    height: 30;
-    top: 131.13px;
-    left: 810.25px;
     /* angle: 0 deg; */
     opacity: 1;
     font-family: Mulish;
@@ -239,7 +278,7 @@ h3 {
     padding: 30px 0;
 }
 
-.serv {
+.service .serv {
     text-align: center;
     /* width: 284;
 height: 60;
@@ -253,7 +292,7 @@ left: 621px; */
     /* leading-trim: NONE; */
     /* line-height: 100%;
 letter-spacing: 0%; */
-
+    margin-bottom: 10px;
 }
 
 .cards {
@@ -263,11 +302,14 @@ letter-spacing: 0%; */
 }
 
 .card {
-    /* width: 486px;
-    height: 338px; */
-    /* angle: 0 deg; */
     opacity: 1;
     background: white;
+    width: 450px;
+    padding-bottom: 10px;
+}
+
+.card img {
+    width: 450px;
 }
 
 .head {
@@ -276,6 +318,7 @@ letter-spacing: 0%; */
 }
 
 .read {
+    width: 200px;
     opacity: 1;
     border-radius: 5px;
     padding-top: 16px;
@@ -289,81 +332,437 @@ letter-spacing: 0%; */
     margin-left: 20px;
     font-size: 20px;
 }
-.recom{
+
+.recom {
     background: var(--clr-light-green);
     padding: 30px 40px 30px 55px;
 }
-.you{
+
+.you {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 20px;
+    place-content: center;
 }
-.your{
+
+.your {
     background: white;
     border-radius: 10px;
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
     padding-bottom: 10px;
 }
-.your img{
-    width: 300px;
+
+.your img {
+    width: 350px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.your p{
+
+.your p {
     margin-top: 5px;
     margin-left: 10px;
     font-family: Mulish;
 }
+
 /* Footer Section */
 .footer-section {
-  background: #064e3b;
-  color: white;
-  padding: 40px 20px;
+    background: #064e3b;
+    color: white;
+    padding: 40px 20px;
 }
+
 .footer-section ul {
-  padding: 0;
-  list-style: none;
+    padding: 0;
+    list-style: none;
 }
 
 .footer-section ul li {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
 }
 
 .footer-section a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #fbc02d; /* gold hover */
+    color: #fbc02d;
+    /* gold hover */
 }
 
 .footer-link {
-  font-weight: bold;
-  color: #fbc02d; /* highlight FAQ */
+    font-weight: bold;
+    color: #fbc02d;
+    /* highlight FAQ */
 }
 
 .footer-section i {
-  margin-right: 6px;
+    margin-right: 6px;
 }
 
 /* Media Querry */
 @media screen and (min-width: 0) and (max-width: 750px) {
-    .you{
+    .you {
         margin: 30px 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .cards {
+        text-align: center;
+        width: 100%;
+    }
+
+    .cards>.card {
+        margin: 15px 0;
+    }
 }
-.cards{
-    text-align: center;
-    width: 100%;
+
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
 }
-.cards > .card{
-    margin: 15px 0;
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+.footer-section a:hover {
+    color: #fbc02d;
+    /* gold hover */
+}
+
+.footer-link {
+    font-weight: bold;
+    color: #fbc02d;
+    /* highlight FAQ */
+}
+
+.footer-section i {
+    margin-right: 6px;
+}
+
+/* Responsive styles for carousel */
+@media screen and (max-width: 700px) {
+    .carousel-item {
+        height: 40vh;
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        flex-direction: column;
+        font-size: 16px;
+    }
+}
+
+.carousel h3 {
+    font-size: 1.1rem;
+}
+
+.carousel .we {
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.acc {
+    /* position: static; */
+    width: 100px;
+    margin: 10px;
+    padding: 5px 0;
+    font-size: 1rem;
+    display: block;
+
+}
+
+.carousel-item img {
+    height: 40vh;
+    object-fit: cover;
+}
+
+.carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+}
+
+.pay .amt {
+    position: absolute;
+    top: 930px;
+    left: 800px;
+}
+
+/* .parent .pay {
+    padding: 30px 0;
+} */
+
+
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .carousel-item {
+        height: 55vh;
+    }
+
+    .carousel-caption {
+        padding: 18px;
+        height: auto;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .we {
+        font-size: 1.1rem;
+        margin-top: 14px;
+    }
+
+    .acc {
+        position: static;
+        width: 100px;
+        margin: 12px auto 0 auto;
+        padding: 12px 0;
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    .carousel-item img {
+        height: 55vh;
+        object-fit: cover;
+    }
+
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+    }
+
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 700px) {
+    .navcon {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 40px;
+        height: 22px;
+    }
+
+    nav {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .pay .img{
+        width: 60%;
+        margin-left: 130px;
+    }
+    .pay .amt{
+        position: absolute;
+        left: 250px;
+        top: 1050px;
+    }
+    .cards {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .card {
+        width: 75vw;
+        min-width: 0;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .you {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .your {
+        width: 75vw;
+        min-width: 0;
+        padding-bottom: 8px;
+    }
+
+    .your img {
+        width: 100%;
+        height: auto;
+    }
+
+    .down {
+        flex-direction: column;
+        padding: 20px 10px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .pay {
+        flex-direction: column;
+        padding: 20px 10px 0 20px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .service {
+        padding: 15px 0;
+        height: auto;
+    }
+
+    .serv {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .day {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive styles for tablets */
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .navcon {
+        width: 100vw;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .logo {
+        margin-left: 40px;
+        margin-top: 15px;
+        width: 48px;
+        height: 26px;
+    }
+
+    nav {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+
+    nav ul {
+        gap: 16px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .pay{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        height: 170vh;
+    }
+    /* .pay .get{
+        margin-bottom: 30px;
+    } */
+    
+    .rub{
+        width: 50%;
+    }
+    .pay .img{
+        width: 50%;
+        margin-left: 220px;
+    }
+    .payAbout{
+        margin-bottom: 0;
+    }
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-left: 25px;
+    }
+
+    .card {
+        width: 45vw;
+        min-width: 0;
+        
+    }
+
+    .card img {
+        width: 45vw;
+        height: auto;
+    }
+
+    .you {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .your {
+        width: 45vw;
+        min-width: 0;
+        padding-bottom: 8px;
+    }
+
+    .your img {
+        width: 100%;
+        height: auto;
+    }
+
+    .down {
+        flex-direction: column;
+        padding: 30px 20px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    /* .pay {
+        flex-direction: column;
+        padding: 30px 20px 0 20px;
+        text-align: center;
+    } */
+
+    .service {
+        padding: 20px 0;
+        height: auto;
+    }
+
+    .serv {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .pay .amt {
+        position: absolute;
+        top: 1430px;
+        left: 400px;
+    }
+
+    .day {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .acc {
+        margin: 20px;
+    }
 }

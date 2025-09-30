@@ -1,0 +1,167 @@
+/* Paste the google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", "sans-serif";
+}
+
+/* Our ROOT Selectors */
+:root {
+    --clr-Nav-bar: rgba(255, 255, 255, 1);
+    --clr-Main-Green: rgba(4, 120, 87, 1);
+    --clr-Main-Blue: rgba(14, 165, 233, 1);
+    --clr-Black-Main: #000;
+    --clr-light-green: rgba(129, 187, 171, 1);
+}
+.image{
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+.content{
+    background: rgb(238, 236, 236);
+    display: grid;
+    place-content: center;
+    padding: 30px 0 20px;
+}
+.quest{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    /* width: 200px; */
+    width: 1065px;
+height: 90px;
+justify-content: space-between;
+/* angle: 0 deg; */
+opacity: 1;
+padding-top: 30px;
+padding-right: 24px;
+padding-bottom: 30px;
+padding-left: 24px;
+margin-bottom: 20px;
+}
+.ans{
+  display: none;
+  margin-bottom: 10px;
+  background: var(--clr-Main-Green);
+  color: white;
+  padding: 15px;
+  width: 700px;
+}
+
+.showAns{
+  border: none;
+  background: white;
+}
+.footer-section {
+  background-color: var(--clr-Main-Green); 
+}
+
+.footer-section h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  padding: 0;
+  list-style: none;
+  line-height: 30px;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fbc02d; /* gold hover */
+}
+
+.footer-link {
+  font-weight: bold;
+  color: #fbc02d; /* highlight FAQ */
+}
+
+.footer-section i {
+  margin-right: 6px;
+}
+
+@media screen and (min-width: 0) and (max-width: 700px) {
+  .content {
+    padding: 15px 0 10px;
+  }
+  .quest {
+    width: 95vw;
+    min-width: 0;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 10px;
+    font-size: 1rem;
+  }
+  .ans {
+    width: 95vw;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  h6 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .showAns {
+    font-size: 1.2rem;
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+  img, .image {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  .content {
+    padding: 20px 0 15px;
+  }
+  .quest {
+    width: 80vw;
+    min-width: 0;
+    height: auto;
+    padding: 20px 16px;
+    font-size: 1.1rem;
+  }
+  .ans {
+    width: 80vw;
+    font-size: 1rem;
+    padding: 12px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h6 {
+    font-size: 1.1rem;
+  }
+  .showAns {
+    font-size: 1.3rem;
+  }
+  img, .image {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+  }
+}
