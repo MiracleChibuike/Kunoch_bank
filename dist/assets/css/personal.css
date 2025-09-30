@@ -40,6 +40,27 @@
 .navbar-nav .nav-link.active::after {
   width: 100%;
 }
+.chevron-transition{
+    transition: transform 0.3s;
+}
+    /* Arrow rotates when dropdown is open */
+#investorDropdown[aria-expanded="true"] .fa-chevron-down{
+transform: rotate(-180deg);
+}
+/* Show dropdown on hover for navbar */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeIn 0.3s;
+}
+.navbar-nav .dropdown:hover .fa-chevron-down {
+  transform: rotate(-180deg);
+  transition: transform 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 *{
     margin: 0;
