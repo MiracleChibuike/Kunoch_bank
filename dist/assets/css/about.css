@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
 
 *{
@@ -6,7 +7,6 @@
     box-sizing: border-box;
     font-family: "Mulish", "sans-serif";
 }
-
 :root{
 --clr-Nav-bar: rgba(255, 255, 255, 1);
 --clr-Main-Green: rgba(4, 120, 87, 1);
@@ -21,7 +21,58 @@
 body {
   scroll-behavior: smooth; /* Smooth scroll effect */
 }
-
+.navbar-brand img {
+  height: 56px;
+  max-height: 64px;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+}
+/* Navbar  hover effect */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #111;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link.active {
+  color: #198754;
+  font-weight: 600;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #198754;
+  transition: width 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.navbar-nav .nav-link:hover {
+  color: #198754;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+/* About Us dropdown */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeInDropdown 0.3s;
+}
+.navbar-nav .dropdown:hover .fa-chevron-down {
+  transform: rotate(-180deg);
+  transition: transform 0.3s;
+}
+@keyframes fadeInDropdown {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 /* Hero Section */
 .hero {
   background: url('/dist/assets/images/aboutus_page/85ac9e9b420f861d01917205846ebe6847207c46.jpg') no-repeat center center/cover;
@@ -155,7 +206,7 @@ body {
 .testimonial-card {
   background: #ffffff;
   border-radius: 12px;
-  padding: 20px;
+  /* padding: 20px; */
   height: 100%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -169,30 +220,38 @@ body {
 .testimonial-card .img-wrapper {
   background: var(--clr-light-green);
   padding: 15px;
-  border-radius: 70%;
-  width: 120px;
-  height: 120px;
+  /* border-radius: 70%; */
+  width: 100%;
   margin: 0 auto 15px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .testimonial-card img {
   width: 100%;
   height: auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .testimonial-card h5 {
   font-weight: bold;
   margin-top: 10px;
 }
+.name_testimony{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
 
 .testimonial-card .role {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 10px;
+}
+.review_comment{
+  text-align: left;
+  padding: 10px;
 }
 
 .testimonial-card .review {
@@ -205,8 +264,11 @@ body {
   color: #fbc02d; /* gold stars */
   font-size: 1.1rem;
 }
+#main-footer{
+  background: var(--clr-Main-Green);
+}
 .footer-section {
-  background-color: var(--clr-Main-Green); 
+  background: var(--clr-Main-Green); 
 }
 
 .footer-section h6 {
