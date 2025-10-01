@@ -1,3 +1,4 @@
+
 /* Our main css Page  */
 
 /* Paste the google fonts */
@@ -765,4 +766,24 @@ letter-spacing: 0%; */
     .acc {
         margin: 20px;
     }
+}
+/* Remove inline styles from index.html */
+.img-full-width {
+    width: 100%;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.recom-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.recom-desc {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
 }

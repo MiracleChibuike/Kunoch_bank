@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
 
 *{
@@ -144,4 +145,182 @@ transform: rotate(-180deg);
 .features-section h2 {
   font-weight: 700;
   letter-spacing: 1px;
+}
+/* Investor Cards */
+.investor-card {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--clr-Nav-bar);
+}
+
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.investor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.investor-card:hover img {
+  transform: scale(1.05);
+}
+.img-container {
+  width: 100%;
+  overflow: hidden;
+  background: var(--clr-light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.img-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.investor-card {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--clr-Nav-bar);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* Make all cards in the row the same height */
+.row.g-4 > [class^="col-"] {
+  display: flex;
+}
+.investor-card {
+  flex: 1 1 100%;
+}
+
+/* Card title row with stars */
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stars i {
+  margin-right: 2px;
+  font-size: 1rem;
+}
+/* Wealth Section */
+.wealth-section {
+  background-color: #005B7F;
+  color: white;
+  padding: 80px 20px;
+}
+
+.wealth-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.wealth-section p {
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+}
+
+.wealth-section .btn {
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.wealth-section .btn:hover {
+  background-color: #FFC107; /* gold accent on hover */
+  color: #000;
+}
+/* Footer Section Styles */
+.footer-section {
+  background-color: var(--clr-Main-Green);
+}
+
+.footer-section h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  padding: 0;
+  list-style: none;
+  line-height: 30px;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fbc02d; /* gold hover */
+}
+
+.footer-link {
+  font-weight: bold;
+  color: #fbc02d; /* highlight FAQ */
+}
+
+.footer-section i {
+  margin-right: 6px;
+}
+
+/* Scroll to Top Button Styles */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 2147483647;
+  background: #198754;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  pointer-events: auto;
+}
+#scrollTopBtn:hover {
+  background: #145c32;
+  color: #fbc02d;
+}
+/* Enable hover dropdown for all navbars */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeIn 0.3s;
+}
+.navbar-nav .dropdown:hover .dropdown-toggle .fa-chevron-down,
+.navbar-nav .dropdown:focus-within .dropdown-toggle .fa-chevron-down {
+  transform: rotate(-180deg);
+  transition: transform 0.3s;
+}
+.navbar-nav .dropdown-toggle .fa-chevron-down {
+  transition: transform 0.3s;
 }
