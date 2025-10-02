@@ -1,3 +1,12 @@
+/* Custom styles for Payday Loan section titles (moved from inline styles in index.html) */
+.payday-title {
+  margin: 15px 0;
+}
+
+.payday-salary {
+  margin: 15px 0;
+  text-align: center;
+}
 
 /* Our main css Page  */
 
@@ -153,11 +162,11 @@ bottom: 20%;
   background: #444;
 } /* Indicators */
 .carousel-indicators {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
+  margin-top: 40px;
+  margin-bottom: 32px;
   display: flex;
+  justify-content: center;
   gap: 8px;
   text-align: center;
 }
@@ -171,7 +180,8 @@ bottom: 20%;
 }
 .carousel-indicators #dot.active {
   background-color: var(--clr-Main-Green);
-} /* Responsive */
+}
+/* Responsive */
 @media (max-width: 768px) {
   .carousel-caption {
     bottom: 50%;

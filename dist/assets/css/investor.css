@@ -324,3 +324,10 @@ transform: rotate(-180deg);
 .navbar-nav .dropdown-toggle .fa-chevron-down {
   transition: transform 0.3s;
 }
+/* Feature card image sizing for investor.html */
+.feature-card-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+}

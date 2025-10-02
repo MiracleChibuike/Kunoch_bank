@@ -1,18 +1,21 @@
+
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Mulish", "sans-serif";
 
-:root{
---clr-Nav-bar: rgba(255, 255, 255, 1);
---clr-Main-Green: rgba(4, 120, 87, 1);
---clr-Main-Blue: rgba(8, 99, 141, 0.945);
---clr-Black-Main: #000;
---clr-light-green: rgba(129, 187, 171, 1);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", "sans-serif";
+}
+
+:root {
+  --clr-Nav-bar: rgba(255, 255, 255, 1);
+  --clr-Main-Green: rgba(4, 120, 87, 1);
+  --clr-Main-Blue: rgba(8, 99, 141, 0.945);
+  --clr-Black-Main: #000;
+  --clr-light-green: rgba(129, 187, 171, 1);
 }
 
 
@@ -26,79 +29,6 @@ body {
   height: 56px;
   max-height: 64px;
   width: auto;
-  object-fit: contain;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 12px;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
-}
-}
-
-/* Navbar link hover effect */
-.navbar-nav .nav-link {
-  position: relative;
-  color: #111;
-  transition: color 0.2s;
-}
-.navbar-nav .nav-link.active {
-  color: #198754;
-  font-weight: 600;
-}
-.navbar-nav .nav-link::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #198754;
-  transition: width 0.2s;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-}
-.navbar-nav .nav-link:hover {
-  color: #198754;
-}
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
-}
-/* Show dropdown on hover for navbar */
-.navbar-nav .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-  animation: fadeIn 0.3s;
-}
-.navbar-nav .dropdown:hover .fa-chevron-down {
-  transform: rotate(-180deg);
-  transition: transform 0.3s;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* Hero Section */
-.hero {
-  background: url('/dist/assets/images/business_page/96bf4f7f743800cd539e19e0a69278331eae81d9\ \(1\).jpg') no-repeat center center/cover;
-  height: 50vh;
-  position: relative;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18); /* shadow effect for hero image */
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-}
-
-.hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -106,6 +36,48 @@ body {
 .hero p {
   font-size: 1.2rem;
 }
+/* Restore hero section background and layout */
+.hero {
+  background: url('/dist/assets/images/business_page/96bf4f7f743800cd539e19e0a69278331eae81d9%20(1).jpg') no-repeat center center/cover;
+  height: 50vh;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Restore business features grid layout */
+.business-features .row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.business-features .col-md-3, .business-features .col-sm-6 {
+  display: flex;
+}
+.feature-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove duplicate/conflicting .img-container and .investor-card for clarity */
+
 
 .image-shadow-separator {
   width: 100%;
@@ -142,45 +114,58 @@ body {
 }
 
 
-/* Investors Section Styles */
+/* Investors Section Styles (fixed, deduplicated, and with light green image background) */
 .investors-section {
   background: linear-gradient(135deg, #f1f1f1 60%, #ffffff 100%);
 }
-
 .investor-card {
-  background: rgba(255,255,255,0.08); /* transparent white overlay */
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--clr-Nav-bar);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   min-height: 220px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
-
 .investor-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.16);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
-
-
-.investor-img-rect {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 0;
-  background: rgba(209, 231, 221, 0.6); /* transparent light green */
-  display: block;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18); /* shadow effect */
+.img-container {
+  width: 100%;
+  overflow: hidden;
+  background: var(--clr-light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  border-radius: 10px 10px 0 0;
 }
-
+.img-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stars i {
+  margin-right: 2px;
+  font-size: 1rem;
+}
 .investors-section h2 {
   font-weight: 700;
   letter-spacing: 1px;
 }
-
 .investor-card h5 {
   font-weight: 600;
 }
-
 .investor-card .fa-star,
 .investor-card .fa-star-half-alt,
 .investor-card .far.fa-star {
@@ -271,7 +256,56 @@ body {
   background-color: #fbc02d; /* gold hover */
   color: #000;
 }
-
+/* --- Meet Our Investors section styles copied exactly from investor.css --- */
+  .investor-card {
+    transition: all 0.3s ease-in-out;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--clr-Nav-bar);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .img-container {
+    width: 100%;
+    overflow: hidden;
+    background: var(--clr-light-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    border-radius: 10px 10px 0 0;
+  }
+  .img-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .investor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  .investor-card:hover img {
+    transform: scale(1.05);
+  }
+  .row.g-4 > [class^="col-"] {
+    display: flex;
+  }
+  .investor-card {
+    flex: 1 1 100%;
+  }
+  .card-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .stars i {
+    margin-right: 2px;
+    font-size: 1rem;
+  }
+  /* --- End Meet Our Investors section styles --- *
 
 
 
