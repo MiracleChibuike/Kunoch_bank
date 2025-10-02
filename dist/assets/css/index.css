@@ -1,12 +1,4 @@
-/* Custom styles for Payday Loan section titles (moved from inline styles in index.html) */
-.payday-title {
-  margin: 15px 0;
-}
 
-.payday-salary {
-  margin: 15px 0;
-  text-align: center;
-}
 
 /* Our main css Page  */
 
@@ -724,4 +716,12 @@ letter-spacing: 0%; */
   .acc {
     margin: 20px;
   }
+}
+.payday-title {
+  margin: 15px 0;
+}
+
+.payday-salary {
+  margin: 15px 0;
+  text-align: center;
 }
