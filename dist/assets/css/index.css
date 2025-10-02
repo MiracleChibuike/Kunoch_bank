@@ -26,9 +26,54 @@
 /* .container {
     box-shadow: 6px 4px 4px 0px rgba(0, 0, 0, 0.25);
 } */
-
+ .parent{
+  display: none;
+ }
+#loader{
+  display: grid;
+  place-content: center;
+  align-content: center;
+  min-height: 100vh;
+  background: var(--clr-Black-Main);
+  overflow-x: hidden;
+}
 /* Sampl Code - Please remove when coding */
-
+.loader {
+  transform: translateZ(1px);
+}
+.loader:after {
+  content: '$';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  text-align: center;
+  line-height:40px;
+  font-size: 32px;
+  font-weight: bold;
+  background: var(--clr-Main-Green);
+  color: var(--clr-light-green);
+  border: 4px double ;
+  box-sizing: border-box;
+  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .1);
+  animation: coin-flip 4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes coin-flip {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+      
 .logo {
   width: 56;
   height: 30;
@@ -304,7 +349,7 @@ letter-spacing: 0%; */
   gap: 20px;
   place-content: center;
   position: relative;
-  left: -30px;
+  /* left: -30px; */
 }
 
 .your {
@@ -316,7 +361,7 @@ letter-spacing: 0%; */
 }
 
 .your img {
-  width: 350px;
+  width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -726,4 +771,12 @@ letter-spacing: 0%; */
   .acc {
     margin: 20px;
   }
+}
+.payday-title {
+  margin: 15px 0;
+}
+
+.payday-salary {
+  margin: 15px 0;
+  text-align: center;
 }
