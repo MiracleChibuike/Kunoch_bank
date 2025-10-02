@@ -1,3 +1,6 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
+
 /* Show dropdown on hover for Personal menu */
 .navbar .nav-item.dropdown:hover .dropdown-menu[aria-labelledby="personalDropdown"] {
   display: block;
@@ -8,9 +11,6 @@
   pointer-events: none;
 }
 /* Personal Dropdown Custom Color */
-
-@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap");
-
 
 /* Navbar link hover effect */
 .navbar-nav .nav-link {
@@ -39,6 +39,27 @@
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
   width: 100%;
+}
+.chevron-transition{
+    transition: transform 0.3s;
+}
+    /* Arrow rotates when dropdown is open */
+#investorDropdown[aria-expanded="true"] .fa-chevron-down{
+transform: rotate(-180deg);
+}
+/* Show dropdown on hover for navbar */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeIn 0.3s;
+}
+.navbar-nav .dropdown:hover .fa-chevron-down {
+  transform: rotate(-180deg);
+  transition: transform 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 *{
@@ -267,7 +288,7 @@ text-align: center;
 .testimonial-card {
   background: #ffffff;
   border-radius: 12px;
-  padding: 20px;
+  /* padding: 20px; */
   height: 100%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -300,15 +321,25 @@ text-align: center;
   background: var(--clr-light-green);
 }
 
+/*  */
 .testimonial-card h5 {
   font-weight: bold;
   margin-top: 10px;
+}
+.name_testimony{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .testimonial-card .role {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 10px;
+}
+.review_comment{
+  text-align: left;
+  padding: 10px;
 }
 
 .testimonial-card .review {
@@ -321,6 +352,7 @@ text-align: center;
   color: #fbc02d; /* gold stars */
   font-size: 1.1rem;
 }
+
 .footer-section {
   background-color: var(--clr-Main-Green); 
   color: white;

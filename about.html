@@ -23,8 +23,9 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Logo</a>
-
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="dist/assets/images/lsr.svg" alt="">
+            </a>
             <!-- Mobile Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 title="Toggle navigation">
@@ -35,17 +36,61 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="personal.html">Personal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="business.html">Business</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
-
-                    <!-- Dropdown About Us -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            About Us
+                        <a class="nav-link d-flex align-items-center" href="personal.html" id="investorDropdown">
+                            Personal
+                            <span class="ms-1"><i class="fas fa-chevron-down chevron-transition"></i></span>
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <ul class="dropdown-menu animate__animated animate__fadeIn" aria-labelledby="personalDropdown">
+                            <li><a class="dropdown-item" href="#personal-accounts">Personal Accounts</a></li>
+                            <li><a class="dropdown-item" href="#target-accounts">Target Accounts</a></li>
+                            <li><a class="dropdown-item" href="#savings-account">Savings Account</a></li>
+                            <li><a class="dropdown-item" href="#personal-loans">Personal Loans & Credit</a></li>
+                            <li><a class="dropdown-item" href="#deposits-investments">Deposits & Investments</a></li>
+                            <li><a class="dropdown-item" href="#low-fees">Low Fees & Transparency</a></li>
+                            <li><a class="dropdown-item" href="#insurance-protection">Insurance & Protection</a></li>
+                            <li><a class="dropdown-item" href="#cards-payments">Cards & Payments</a></li>
+                    
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex align-items-center" href="business.html" id="businessDropdown">
+                            Business
+                            <span class="ms-1"><i class="fas fa-chevron-down chevron-transition"></i></span>
+                        </a>
+                        <ul class="dropdown-menu animate__animated animate__fadeIn" aria-labelledby="businessDropdown">
+                            <li><a class="dropdown-item" href="#">Business Accounst</a></li>
+                            <li><a class="dropdown-item" href="#">Business Loan & Credit Solutions</a></li>
+                            <li><a class="dropdown-item" href="#">Merchant Services</a></li>
+                            <li><a class="dropdown-item" href="#">TreasuryManagement</a></li>
+                            <li><a class="dropdown-item" href="#">Cash Flow Managment</a></li>
+                            <li><a class="dropdown-item" href="#">Payments</a></li>
+                            <li><a class="dropdown-item" href="#">Smart Financing Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex align-items-center" href="investor.html" id="investorDropdown">
+                            Investors
+                            <span class="ms-1"><i class="fas fa-chevron-down chevron-transition"></i></span>
+                        </a>
+                        <ul class="dropdown-menu animate__animated animate__fadeIn" aria-labelledby="investorDropdown">
+                            <li><a class="dropdown-item" href="#">Alternative Investments</a></li>
+                            <li><a class="dropdown-item" href="#">Wealth Management</a></li>
+                            <li><a class="dropdown-item" href="#">Research & Education</a></li>
+                            <li><a class="dropdown-item" href="#">Sustainability & Corporate Responsibility</a></li>
+                            <li><a class="dropdown-item" href="#">Market Insights</a></li>
+                            <li><a class="dropdown-item" href="#">Investment Products</a></li>
+                            <li><a class="dropdown-item" href="#">Investment Relations</a></li>
+                            <li><a class="dropdown-item" href="#">Digital Investing</a></li>
+                    
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active d-flex align-items-center" href="about.html" id="businessDropdown">
+                            About Us
+                            <span class="ms-1"><i class="fas fa-chevron-down chevron-transition"></i></span>
+                        </a>
+                        <ul class="dropdown-menu animate__animated animate__fadeIn" aria-labelledby="businessDropdown">
                             <li><a class="dropdown-item" href="#">Who We Are</a></li>
                             <li><a class="dropdown-item" href="#">Our Values</a></li>
                             <li><a class="dropdown-item" href="#">Testimonials</a></li>
@@ -173,11 +218,16 @@
                             <img src="dist/assets/images/aboutus_page/29ff9f7b9f88a51573db9d5f10739298f6f8aff8.png"
                                 alt="Alex Tiger">
                         </div>
-                        <h5>Alex Tiger</h5>
-                        <p class="role">Business Man</p>
+                      <div class="name_testimony">
+                          <h5>Alex Tiger</h5>
+                           <p class="stars">★★★★★</p>
+                      </div>
+                       <div class="review_comment">
+                         <p class="role">Business Man</p>
                         <p class="review">The instant transfer feature is a lifesaver. I send and receive money in
                             seconds, no more waiting around like with my old bank.</p>
-                        <div class="stars">★★★★★</div>
+                       </div>
+                       
                     </div>
                 </div>
 
@@ -188,11 +238,15 @@
                             <img src="dist/assets/images/aboutus_page/a86324068e7ba61a576c3e4922a9e3848ea449e7.png"
                                 alt="Ngozi Chinwe">
                         </div>
-                        <h5>Ngozi Chinwe</h5>
-                        <p class="role">Business Woman</p>
-                        <p class="review">Managing business and personal accounts in one app is so convenient. It’s
-                            fast, secure, and super intuitive.</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="name_testimony">
+                            <h5>Ngozi Chinwe</h5>
+                            <p class="stars">★★★★★</p>
+                        </div>
+                        <div class="review_comment">
+                            <p class="role">Business Woman</p>
+                            <p class="review">Managing business and personal accounts in one app is so convenient. It’s
+                                fast, secure, and super intuitive.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -203,11 +257,15 @@
                             <img src="dist/assets/images/aboutus_page/da6cda2f71955b8f6c37e5bf0ee911932e5fedc3.png"
                                 alt="Emma Jefferson">
                         </div>
-                        <h5>Emma Jefferson</h5>
-                        <p class="role">Business Man</p>
-                        <p class="review">I love the rewards. Every time I use the app, I feel like I’m getting a little
-                            something back. It actually makes spending smart.</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="name_testimony">
+                            <h5>Emma Jefferson</h5>
+                            <p class="stars">★★★★★</p>
+                        </div>
+                        <div class="review_comment">
+                            <p class="role">Business Man</p>
+                            <p class="review">I love the rewards. Every time I use the app, I feel like I’m getting a little
+                                something back. It actually makes spending smart.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -218,11 +276,15 @@
                             <img src="dist/assets/images/aboutus_page/452d858a315d00fe9cd6664a8195ab337d498bd4.png"
                                 alt="Nisha Renny">
                         </div>
-                        <h5>Nisha Renny</h5>
-                        <p class="role">Business Woman</p>
-                        <p class="review">Managing business and personal accounts in one app is so convenient. It’s
-                            fast, secure, and super intuitive.</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="name_testimony">
+                            <h5>Nisha Renny</h5>
+                            <p class="stars">★★★★★</p>
+                        </div>
+                        <div class="review_comment">
+                            <p class="role">Business Woman</p>
+                            <p class="review">Managing business and personal accounts in one app is so convenient. It’s
+                                fast, secure, and super intuitive.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,11 +297,15 @@
                             <img src="dist/assets/images/aboutus_page/18ed5b10f991bb4e80c048a23a905292f8606887.png"
                                 alt="Adam Idris">
                         </div>
-                        <h5>Adam Idris</h5>
-                        <p class="role">Student</p>
-                        <p class="review">First time doing online banking, and it was easy. Very user-friendly, even for
-                            beginners.</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="name_testimony">
+                            <h5>Adam Idris</h5>
+                            <p class="stars">★★★★★</p>
+                        </div>
+                        <div class="review_comment">
+                            <p class="role">Student</p>
+                            <p class="review">First time doing online banking, and it was easy. Very user-friendly, even for
+                                beginners.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -249,11 +315,15 @@
                             <img src="dist/assets/images/aboutus_page/027a3466ffe3709ac213c58777c01568d3b65419.png"
                                 alt="Nicole Chuks">
                         </div>
-                        <h5>Nicole Chuks</h5>
-                        <p class="role">Merchant</p>
-                        <p class="review">Opened a business account online fast and simple. Live chat support was quick
-                            to help. Great experience.</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="name_testimony">
+                            <h5>Nicole Chuks</h5>
+                            <p class="stars">★★★★★</p>
+                        </div>
+                        <div class="review_comment">
+                            <p class="role">Merchant</p>
+                            <p class="review">Opened a business account online fast and simple. Live chat support was quick
+                                to help. Great experience.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -263,11 +333,15 @@
                             <img src="dist/assets/images/aboutus_page/6e846216c6ba55a5c5dfba92ddf909be58478f24.png"
                                 alt="Donald Timothy">
                         </div>
-                        <h5>Donald Timothy</h5>
-                        <p class="role">Software Developer</p>
-                        <p class="review">Set up a joint savings account in minutes. Loved the budgeting tools and clean
-                            layout.</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="name_testimony">
+                            <h5>Donald Timothy</h5>
+                            <p class="stars">★★★★★</p>
+                        </div>
+                        <div class="review_comment">
+                            <p class="role">Software Developer</p>
+                            <p class="review">Set up a joint savings account in minutes. Loved the budgeting tools and clean
+                                layout.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -277,18 +351,22 @@
                             <img src="dist/assets/images/aboutus_page/e520600f1ba63ec15b5c8fdef014a6b9bee2800d.png"
                                 alt="Alexa Emeka">
                         </div>
-                        <h5>Alexa Emeka</h5>
-                        <p class="role">Accountant</p>
-                        <p class="review">Used the site to manage mortgage payments. Easy to navigate and works well on
-                            mobile.</p>
-                        <div class="stars">★★★★★</div>
+                        <div class="name_testimony">
+                            <h5>Alexa Emeka</h5>
+                            <p class="stars">★★★★★</p>
+                        </div>
+                        <div class="review_comment">
+                            <p class="role">Accountant</p>
+                            <p class="review">Used the site to manage mortgage payments. Easy to navigate and works well on
+                                mobile.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Footer Section -->
-    <footer class="footer-section text-white py-5">
+     <footer class="footer-section text-white py-5">
         <div class="container">
             <div class="row">
                 <!-- Personal -->
@@ -370,6 +448,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- Scroll to Top Button -->
     <button id="scrollTopBtn" title="Go to top">
