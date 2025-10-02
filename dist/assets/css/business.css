@@ -18,7 +18,53 @@
   --clr-light-green: rgba(129, 187, 171, 1);
 }
 
-
+ .parent{
+  display: none;
+ }
+#loader{
+  display: grid;
+  place-content: center;
+  align-content: center;
+  min-height: 100vh;
+  background: var(--clr-Black-Main);
+  overflow-x: hidden;
+}
+/* Sampl Code - Please remove when coding */
+.loader {
+  transform: translateZ(1px);
+}
+.loader:after {
+  content: '$';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  text-align: center;
+  line-height:40px;
+  font-size: 32px;
+  font-weight: bold;
+  background: var(--clr-Main-Green);
+  color: var(--clr-light-green);
+  border: 4px double ;
+  box-sizing: border-box;
+  box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .1);
+  animation: coin-flip 4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes coin-flip {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
 
 
 body {
@@ -35,6 +81,25 @@ body {
 
 .hero p {
   font-size: 1.2rem;
+}
+
+    /* Arrow rotates when dropdown is open */
+#investorDropdown[aria-expanded="true"] .fa-chevron-down{
+transform: rotate(-180deg);
+}
+/* Show dropdown on hover for navbar */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeIn 0.3s;
+}
+.navbar-nav .dropdown:hover .fa-chevron-down {
+  transform: rotate(-180deg);
+  transition: transform 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 /* Restore hero section background and layout */
 .hero {
